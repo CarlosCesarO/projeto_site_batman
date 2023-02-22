@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="script.js"></script>
+
 </head>
 <body>
     <header>
@@ -28,23 +30,26 @@
         </nav>
     </header>
 
-    <div id="trailer-container">
-        <div class="content">
-            <video controls class="trailer">
-                <source src="./BATMAN _ Trailer 3 Oficial Dublado.mp4" type="video/mp4">
-                Seu navegador não possui suporte para vídeos.
-            </video>
-            <div id="sinopse">
-                <p class="discription">
-                    Após dois anos espreitando as ruas como Batman, Bruce Wayne se encontra nas profundezas 
-                    mais sombrias de Gotham City. Com poucos aliados confiáveis, o vigilante solitário se estabelece 
-                    como a personificação da vingança para a população.
-                </p>
-                <button class="button">Inscreva-se</button>
+    <div class="contact">
+        <form  action="/batman project/contato.html">
+            <div><a class="comentary-title">Deixe seu comentário</a></div>
+            <div>
+                <label for="label-name" class="label-contact">Nome</label><br>
+                <input type="name" class="input" name="nome_contact" placeholder="Carlos Cesar"><br><br>
             </div>
-        </div>
-    </div>
+            <div>
+                <label for="label-contact" class="label-contact"  >Telefone</label><br>
+                <input type="text"  min="0" max="11" onblur="mascaraDeTelefone(this)" onfocus="tiraHifen(this)" class="input" name="telefone-contact" placeholder="(11) 99999-9999" ><br><br>
+            </div>
+            <div>
+                <label for="label-contact" class="label-contact">Comentário</label><br>
+                <textarea name="comentary" class="comentary" cols="30" rows="10" placeholder="Digite aqui seu comentário"></textarea>
+            </div>
+            <button class="button-contact">Enviar</button>
+        </form>
 
+    </div>
+    
     <footer>
         <img style="object-fit:contain;" id="logo" src="./logo_batman.png">
         <span>Todos os direitos reservados ©</span>
